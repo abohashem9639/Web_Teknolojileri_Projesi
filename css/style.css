@@ -1,0 +1,248 @@
+:root {
+    --ana-renk: #AC58F5;
+    --ikin-el: #0F172A;
+    --ucuncu: #222C42;
+    --dortuncu: #F8FBFE;
+    --gray: #666;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+header {
+    height: 62px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--ikin-el) !important;
+}
+
+header .container .navbar {
+    background-color: var(--ikin-el) !important;
+}
+
+header .container .navbar .container-fluid>a {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dortuncu);
+
+    display: flex;
+}
+
+header .container .navbar .container-fluid button span {
+    color: var(--dortuncu);
+}
+
+header .container .navbar .container-fluid .collapse {
+    flex-grow: 0;
+}
+
+header .container .navbar .container-fluid .collapse {
+    text-align: center;
+}
+
+header .container .navbar .container-fluid .collapse div a {
+    padding: 8px 15px;
+    font-size: 18px;
+    background-attachment: fixed;
+    color: var(--dortuncu);
+}
+
+header .container .navbar .container-fluid .collapse div a.active {
+    color: var(--ana-renk);
+}
+
+header .container .navbar .container-fluid .collapse div a:hover {
+    color: var(--ana-renk);
+}
+
+/* Header */
+
+
+/* Footer */
+
+footer {
+    background-color: var(--ikin-el);
+}
+
+footer .container>div {
+    margin-top: 25px;
+
+}
+
+footer .container div h2 {
+    padding-top: 15px;
+}
+
+footer .container div h2 a {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dortuncu);
+
+}
+
+footer .container div div {
+    margin: 25px 0;
+}
+
+footer .container div div a {
+    font-size: 28px;
+    color: var(--ana-renk);
+}
+
+footer .container div div a:not(:last-child) {
+    margin-right: 35px;
+}
+
+footer .container div div a.facebook:hover {
+    color: #1877f2;
+}
+
+footer .container div div a.instagram:hover {
+    color: #f77737;
+}
+
+footer .container div div a.github:hover {
+    color: #333;
+}
+
+footer .container p {
+    color: var(--dortuncu);
+    margin: 0;
+    padding: 0 0 10px;
+
+}
+
+/* Footer */
+
+.first {
+    height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+
+}
+
+.first .container .start {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.first .container .start h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.first .container .start p {
+    color: var(--gray);
+    font-size: 20px;
+}
+
+
+.first .start img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.zaman-cizilgesi-kapak {
+    position: relative;
+    padding: 22px 0;
+}
+
+.zaman-cizilgesi-kapak:last-child:before {
+    height: 0;
+}
+
+.zaman-cizilgesi-kapak:before {
+    content: "";
+    background: var(--ana-renk);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 38px;
+}
+
+.zaman-cizilgesi-yr {
+    background: #474559;
+    border-radius: 100%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.zaman-cizilgesi-yr span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    line-height: 75px;
+    background-color: var(--ana-renk);
+    border-radius: 50%;
+}
+
+.zaman-cizilgesi-bilgi {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 432px;
+    margin-left: 6em;
+
+}
+
+.zaman-cizilgesi-bilgi h3 {
+    color: var(--ikin-el);
+}
+
+.zaman-cizilgesi-bilgi p {
+    color: var(--gray);
+}
+
+.zaman-cizilgesi-bilgi small {
+    color: #474559;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
