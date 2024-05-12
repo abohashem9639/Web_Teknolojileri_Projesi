@@ -1,0 +1,112 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40;
+    color: #fff;
+}
+
+header .navbar {
+    padding: 1rem 0;
+}
+
+header .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+header .navbar-nav .nav-link:hover {
+    background-color: #495057;
+}
+
+/* Halep Tanitimi Section Styles */
+.halep-tanitimi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.halep-tanitimi .first-foto img {
+    width: 50%;
+    height: auto;
+}
+
+.halep-tanitimi .first-foto {
+    flex: 1;
+}
+
+.halep-tanitimi .content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+/* Foto Sections Styles */
+.foto1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.foto1 .foto2 img,
+.foto1 .foto3 img,
+.foto1 .foto4 img {
+    width: 40%;
+    height: auto;
+}
+
+.foto1 .content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+footer h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+footer .social-icons a {
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}

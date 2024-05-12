@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iletişim.css">
+    <title>İletişim</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">ABO HASHEM</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="index.html">Hakkımda</a>
+                            <a class="nav-link" href="sehrim.html">Şehrim</a>
+                            <a class="nav-link" href="miras.html">Miras</a>
+                            <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                            <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
+                            <a class="nav-link active" href="iletisim.html">İletişim</a>
+                            <a class="nav-link" target="_blank" href="login.html" d-hover="LogIn">Giriş Yap</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h1>İletişim</h1>
+            <form action="iletisim.php" method="post">
+                <div class="mb-3">
+                    <label for="adiniz" class="form-label">Adınız</label>
+                    <input type="text" class="form-control" id="adiniz" name="adiniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="soyadiniz" class="form-label">Soyadınız</label>
+                    <input type="text" class="form-control" id="soyadiniz" name="soyadiniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cinsiyetiniz" class="form-label">Cinsiyetiniz</label>
+                    <select class="form-control" id="cinsiyetiniz" name="cinsiyetiniz" required>
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="sehiriniz" class="form-label">Şehiriniz</label>
+                    <input type="text" class="form-control" id="sehiriniz" name="sehiriniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="numaraniz" class="form-label">Numaranız</label>
+                    <input type="text" class="form-control" id="numaraniz" name="numaraniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailiniz" class="form-label">E-mailiniz</label>
+                    <input type="email" class="form-control" id="emailiniz" name="emailiniz" required>
+                </div>
+                <div class="mb-3">
+                    <label for="universite" class="form-label">Hangi Üniversitede Okuyorsunuz</label>
+                    <input type="text" class="form-control" id="universite" name="universite" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Kullandığınız Diller (programlama dilleri)</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="c++" value="C++">
+                        <label class="form-check-label" for="c++">
+                            C++
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="csharp" value="C#">
+                        <label class="form-check-label" for="csharp">
+                            C#
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="python" value="Python">
+                        <label class="form-check-label" for="python">
+                            Python
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="javascript" value="JavaScript">
+                        <label class="form-check-label" for="javascript">
+                            JavaScript
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="java" value="Java">
+                        <label class="form-check-label" for="java">
+                            Java
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="diller[]" id="php" value="PHP">
+                        <label class="form-check-label" for="php">
+                            PHP
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="ozet" class="form-label">Seçtiğiniz Dilleri Bir Cümle ile Özetleyiniz</label>
+                    <input type="text" class="form-control" id="ozet" name="ozet" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mesajiniz" class="form-label">Mesajınız</label>
+                    <textarea class="form-control" id="mesajiniz" name="mesajiniz" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+                <button type="reset" class="btn btn-secondary">Temizle</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h2><a href="index.html">ABO HASHEM</a></h2>
+                <div>
+                    <a class="facebook" target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="instagram" target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a class="github" target="_blank" href="https://www.github.com"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+            </div>
+            <p>&copy; All rights reserved to Abo Hashem</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
