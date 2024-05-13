@@ -1,6 +1,6 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     $adiniz = $_POST["adiniz"];
     $soyadiniz = $_POST["soyadiniz"];
     $cinsiyetiniz = $_POST["cinsiyetiniz"];
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p><strong>Kullandığınız Diller:</strong> ";
     if (!empty($diller)) {
         foreach ($diller as $dil) {
-            echo $dil . " ";
+            echo $dil . ", ";
         }
     } else {
         echo "Dil seçmediniz.";

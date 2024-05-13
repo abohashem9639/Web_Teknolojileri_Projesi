@@ -148,24 +148,29 @@ footer .container p {
 
 .first {
     height: calc(100vh - 64px);
+}
+
+.first .container {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.first .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: 20px;
-
-}
-
 .first .container .start {
-
+    flex-basis: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
 
+@media (max-width: 767px) {
+    .first .container {
+        flex-direction: column;
+    }
+    .first .container .start {
+        text-align: center;
+    }
 }
 
 .first .container .start h1 {
