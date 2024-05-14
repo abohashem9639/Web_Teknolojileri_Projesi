@@ -5,6 +5,10 @@
     --gray: #666;
 }
 
+* {
+    font-family: "Radio Canada Big", sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -51,6 +55,7 @@ header {
 
 header .container .navbar {
     background-color: var(--ikin-el) !important;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid>a {
@@ -66,13 +71,10 @@ header .container .navbar .container-fluid button span {
 
 header .container .navbar .container-fluid .collapse {
     flex-grow: 0;
-    text-align: center;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid .collapse div a {
-    padding: 8px 15px;
-    font-size: 18px;
-    background-attachment: fixed;
     color: var(--dortuncu);
 }
 
@@ -83,6 +85,8 @@ header .container .navbar .container-fluid .collapse div a.active {
 header .container .navbar .container-fluid .collapse div a:hover {
     color: var(--ana-renk);
 }
+
+/* Header */
 
 footer {
     background-color: var(--ikin-el);
@@ -125,7 +129,7 @@ footer .container div div a.instagram:hover {
 
 footer .container div div a.github:hover {
     color: #333;
-}   
+}
 
 footer .container p {
     color: var(--dortuncu);
@@ -156,10 +160,27 @@ footer .container p {
     /* Paragraflar arasındaki boşluk */
 }
 
-.container .mySlides img , 
-.container .row .column img
-{
-    width: 100%;
+.container .mySlides img,
+.container .row .column img {
+    width: 100%
+}
+
+.container .mySlides img {
+    height: 550px
+}
+
+.container .row .column img {
+    height: 100px
+}
+
+@media (max-width: 767px) {
+    .container .mySlides img {
+        height: 300px
+    }
+
+    .container .row .column img {
+        height: 40px
+    }
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -186,7 +207,8 @@ footer .container p {
 
 /* Position the "next button" to the right */
 .next {
-    right: 0;
+    right: 10px;
+    ;
     border-radius: 3px 0 0 3px;
 }
 
@@ -247,7 +269,7 @@ footer .container p {
     background: linear-gradient(45deg, #AC58F5, #98b0e9);
 } */
 
- .halep-intro p {
+.halep-intro p {
     background: linear-gradient(45deg, #AC58F5, #0F172A);
     padding: 30px 20px;
     color: var(--dortuncu);
@@ -255,7 +277,13 @@ footer .container p {
     border-radius: 10px;
     margin-bottom: 20px;
     line-height: 1.8;
-} 
+
+    transition: transform 0.3s ease;
+}
+
+.halep-intro p:hover {
+    transform: scale(1.05);
+}
 
 .halep-intro p strong {
     font-size: 19px;

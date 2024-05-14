@@ -6,6 +6,10 @@
     --gray: #666;
 }
 
+* {
+    font-family: "Radio Canada Big", sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -45,10 +49,13 @@ header {
     height: 62px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: var(--ikin-el) !important;
+    margin-bottom: 20px;
+    /* Navbar altındaki boşluğu azalt */
 }
 
 header .container .navbar {
     background-color: var(--ikin-el) !important;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid>a {
@@ -64,28 +71,31 @@ header .container .navbar .container-fluid button span {
 
 header .container .navbar .container-fluid .collapse {
     flex-grow: 0;
-    text-align: center;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid .collapse div a {
-    padding: 8px 15px;
-    font-size: 18px;
     color: var(--dortuncu);
 }
 
-header .container .navbar .container-fluid .collapse div a.active,
-header .container .navbar .container-fluid .collapse div a:hover {
+header .container .navbar .container-fluid .collapse div a.active {
     color: var(--ana-renk);
 }
 
+header .container .navbar .container-fluid .collapse div a:hover {
+    color: var(--ana-renk);
+}
+/* Header */
+
+/* Footer */
+
 footer {
     background-color: var(--ikin-el);
-    padding: 20px 0;
 }
 
 footer .container>div {
     margin-top: 25px;
-    text-align: center;
+
 }
 
 footer .container div h2 {
@@ -96,6 +106,7 @@ footer .container div h2 a {
     font-size: 24px;
     font-weight: 700;
     color: var(--dortuncu);
+
 }
 
 footer .container div div {
@@ -127,7 +138,10 @@ footer .container p {
     color: var(--dortuncu);
     margin: 0;
     padding: 0 0 10px;
+
 }
+
+/* Footer */
 
 .contact {
     padding: 50px 0;

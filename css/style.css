@@ -7,6 +7,10 @@
 
 }
 
+* {
+    font-family: "Radio Canada Big", sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -46,17 +50,19 @@ header {
     height: 62px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: var(--ikin-el) !important;
+    margin-bottom: 20px;
+    /* Navbar altındaki boşluğu azalt */
 }
 
 header .container .navbar {
     background-color: var(--ikin-el) !important;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid>a {
     font-size: 24px;
     font-weight: 700;
     color: var(--dortuncu);
-
     display: flex;
 }
 
@@ -66,16 +72,10 @@ header .container .navbar .container-fluid button span {
 
 header .container .navbar .container-fluid .collapse {
     flex-grow: 0;
-}
-
-header .container .navbar .container-fluid .collapse {
-    text-align: center;
+    z-index: 10;
 }
 
 header .container .navbar .container-fluid .collapse div a {
-    padding: 8px 15px;
-    font-size: 18px;
-    background-attachment: fixed;
     color: var(--dortuncu);
 }
 
@@ -168,6 +168,7 @@ footer .container p {
     .first .container {
         flex-direction: column;
     }
+
     .first .container .start {
         text-align: center;
     }
