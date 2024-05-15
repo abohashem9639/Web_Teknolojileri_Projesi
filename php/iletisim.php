@@ -13,25 +13,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mesajiniz = $_POST["mesajiniz"];
 
     echo "<h3>Girdiğiniz Bilgiler:</h3>";
-    echo "<p><strong>Adınız:</strong> $adiniz</p>";
-    echo "<p><strong>Soyadınız:</strong> $soyadiniz</p>";
-    echo "<p><strong>Cinsiyetiniz:</strong> $cinsiyetiniz</p>";
-    echo "<p><strong>Şehiriniz:</strong> $sehiriniz</p>";
-    echo "<p><strong>Numaranız:</strong> $numaraniz</p>";
-    echo "<p><strong>E-mailiniz:</strong> $emailiniz</p>";
-    echo "<p><strong>Hangi Üniversitede Okuyorsunuz:</strong> $universite</p>";
+    echo "<table border='1' style='width: 100%;'>";
+    echo "<tr><th>Alan</th><th>Bilgi</th></tr>";
+    echo "<tr><td>Adınız</td><td>$adiniz</td></tr>";
+    echo "<tr><td>Soyadınız</td><td>$soyadiniz</td></tr>";
+    echo "<tr><td>Cinsiyetiniz</td><td>$cinsiyetiniz</td></tr>";
+    echo "<tr><td>Şehiriniz</td><td>$sehiriniz</td></tr>";
+    echo "<tr><td>Numaranız</td><td>$numaraniz</td></tr>";
+    echo "<tr><td>E-mailiniz</td><td>$emailiniz</td></tr>";
+    echo "<tr><td>Hangi Üniversitede Okuyorsunuz</td><td>$universite</td></tr>";
 
-    echo "<p><strong>Kullandığınız Diller:</strong> ";
+    echo "<tr><td>Kullandığınız Diller</td><td>";
     if (!empty($diller)) {
-        foreach ($diller as $dil) {
-            echo $dil . ", ";
-        }
+        echo implode(", ", $diller);
     } else {
         echo "Dil seçmediniz.";
     }
-    echo "</p>";
+    echo "</td></tr>";
 
-    echo "<p><strong>Seçtiğiniz Dilleri Bir Cümle ile Özetleyiniz:</strong> $ozet</p>";
-    echo "<p><strong>Mesajınız:</strong> $mesajiniz</p>";
+    echo "<tr><td>Seçtiğiniz Dilleri Bir Cümle ile Özetleyiniz</td><td>$ozet</td></tr>";
+    echo "<tr><td>Mesajınız</td><td>$mesajiniz</td></tr>";
+    echo "</table>";
 }
 ?>
