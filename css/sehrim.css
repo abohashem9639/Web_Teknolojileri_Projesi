@@ -147,7 +147,7 @@ footer .container p {
 } */
 
 .halep-intro h1 {
-    color: var(--dortuncu);
+    color: var(--ikin-el);
     font-size: 36px;
     margin-bottom: 10px;
     /* Boşluğu azaltmak için margin ayarlandı */
@@ -162,7 +162,14 @@ footer .container p {
 
 .container .mySlides img,
 .container .row .column img {
-    width: 100%
+    width: 100%;
+        /* box-shadow: 0px 0 10px 2px rgba(10, 0, 50, 50); */
+    margin: 10px;
+
+}
+
+.container .row .column img{
+    margin-bottom: 100px;
 }
 
 .container .mySlides img {
@@ -197,19 +204,19 @@ footer .container p {
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: var(--dortuncu);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-    right: 10px;
-    ;
-    border-radius: 3px 0 0 3px;
+    right: 0px;
+}
+
+.prev {
+    left: 20px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
