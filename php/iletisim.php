@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -8,12 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numaraniz = $_POST["numaraniz"];
     $emailiniz = $_POST["emailiniz"];
     $universite = $_POST["universite"];
-    $diller = $_POST["diller"];
+    $diller = isset($_POST["diller"]) ? $_POST["diller"] : [];
     $ozet = $_POST["ozet"];
     $mesajiniz = $_POST["mesajiniz"];
 
     echo "<h3>Girdiğiniz Bilgiler:</h3>";
-    echo "<table border='1' style='width: 100%;'>";
+    echo "<table>";
     echo "<tr><th>Alan</th><th>Bilgi</th></tr>";
     echo "<tr><td>Adınız</td><td>$adiniz</td></tr>";
     echo "<tr><td>Soyadınız</td><td>$soyadiniz</td></tr>";
@@ -36,3 +71,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "</table>";
 }
 ?>
+</body>
+</html>

@@ -59,6 +59,35 @@ header .container .navbar {
     z-index: 10;
 }
 
+/* style.css dosyasına ekleyin */
+.giris {
+    background-color: var(--ana-renk);
+    /* Arka plan rengi */
+    color: white;
+    /* Yazı rengi */
+    padding: 10px 20px;
+    /* İç boşluklar */
+    border-radius: 5px;
+    /* Kenarlık köşelerini yuvarlama */
+    text-align: center;
+    /* Metin hizalama */
+    display: inline-block;
+    /* Satır içi blok gösterimi */
+    font-size: 16px;
+    /* Yazı tipi boyutu */
+    transition: background-color 0.3s ease;
+    /* Arka plan rengi geçiş efekti */
+    margin-left: 40px;
+    background-size: 10px;
+}
+
+.giris:hover {
+    background-color: var(--dortuncu);
+    /* Üzerine gelindiğinde arka plan rengi */
+    color: #ffffff;
+    /* Üzerine gelindiğinde yazı rengi */
+}
+
 header .container .navbar .container-fluid>a {
     font-size: 24px;
     font-weight: 700;

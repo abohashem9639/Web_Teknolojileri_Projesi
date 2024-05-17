@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Kullanıcı adı ve şifreyi aldık
     $email = $_POST["email"];
-    $password = $_POST["sifre"];
+    $password = $_POST["password"];
 
     // Burada giriş kontrolü yapılabilir
     // Örnek kontrol

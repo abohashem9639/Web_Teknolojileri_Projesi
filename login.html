@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" ng-app="loginApp">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/all.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/login.css">
-	<title>Giriş Yap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 </head>
 
-<div class="container">
-	<div class="screen">
-		<div class="screen__content">
-			<form class="login" action="php/login.php" method="post">
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="email" name="email" class="login__input" placeholder="Email">
-				</div>
-				<div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-					<input type="password" name="sifre" class="login__input" placeholder="Password">
-				</div>
-				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>
-			</form>
-			<div class="social-login">
-				<h3>log in via</h3>
-				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div>
-			</div>
-		</div>
-		<div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
-		</div>
-	</div>
-</div>
+<body ng-controller="loginController">
+    <div class="container">
+        <div class="login-container">
+            <h1 class="title">ABO HASHEM'e Hoş Geldiniz!</h1>
+            <form class="login-form" action="php/login.php" method="post" ng-submit="submitForm()" novalidate>
+                <div class="form-group">
+                    <label for="email" class="label">E-posta Adresi</label>
+                    <input type="email" id="email" name="email" class="input" placeholder="E-posta adresinizi girin"
+                        ng-model="formData.email" required>
+                    <div ng-show="loginForm.email.$error.required && loginForm.email.$dirty" class="error">E-posta
+                        adresi zorunludur.</div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="label">Şifre</label>
+                    <input type="password" id="password" name="password" class="input" placeholder="Şifrenizi girin"
+                        ng-model="formData.password" required>
+                    <div ng-show="loginForm.password.$error.required && loginForm.password.$dirty" class="error">Şifre
+                        zorunludur.</div>
+                </div>
+                <button type="submit" class="button" ng-disabled="loginForm.$invalid">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module('loginApp', []);
+        app.controller('loginController', function ($scope, $http) {
+            $scope.formData = {};
+
+            $scope.submitForm = function () {
+                // Form geçerli mi kontrol et
+                if ($scope.loginForm.$valid) {
+                    // Eğer geçerli ise, sunucuya isteği gönder
+                    $http.post('php/login.php', $scope.formData)
+                        .then(function (response) {
+                            // Sunucudan gelen yanıtı işle
+                            console.log(response.data);
+                        })
+                        .catch(function (error) {
+                            // Hata durumunda işle
+                            console.error('Hata:', error);
+                        });
+                } else {
+                    // Eğer form geçerli değilse, kullanıcıya bir hata mesajı göster
+                    console.log('Form geçerli değil');
+                }
+            };
+
+        });
+    </script>
+</body>
 
 </html>

@@ -59,6 +59,35 @@ header .container .navbar {
     z-index: 10;
 }
 
+/* style.css dosyasına ekleyin */
+.giris {
+    background-color: var(--ana-renk);
+    /* Arka plan rengi */
+    color: white;
+    /* Yazı rengi */
+    padding: 10px 20px;
+    /* İç boşluklar */
+    border-radius: 5px;
+    /* Kenarlık köşelerini yuvarlama */
+    text-align: center;
+    /* Metin hizalama */
+    display: inline-block;
+    /* Satır içi blok gösterimi */
+    font-size: 16px;
+    /* Yazı tipi boyutu */
+    transition: background-color 0.3s ease;
+    /* Arka plan rengi geçiş efekti */
+    margin-left: 40px;
+    background-size: 10px;
+}
+
+.giris:hover {
+    background-color: var(--dortuncu);
+    /* Üzerine gelindiğinde arka plan rengi */
+    color: #ffffff;
+    /* Üzerine gelindiğinde yazı rengi */
+}
+
 header .container .navbar .container-fluid>a {
     font-size: 24px;
     font-weight: 700;
@@ -143,7 +172,8 @@ footer .container p {
     padding: 0 0 10px;
 
 
-}   
+}
+
 /* Footer */
 
 .filimler {
@@ -158,7 +188,8 @@ footer .container p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     overflow: hidden;
-    width: calc(20% - 20px); /* Her satırda 5 kart olacak şekilde genişlik ayarlandı */
+    width: calc(20% - 20px);
+    /* Her satırda 5 kart olacak şekilde genişlik ayarlandı */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -215,24 +246,28 @@ footer .container p {
 /* Medya Sorguları */
 @media (max-width: 1200px) {
     .card {
-        width: calc(25% - 20px); /* Her satırda 4 kart */
+        width: calc(25% - 20px);
+        /* Her satırda 4 kart */
     }
 }
 
 @media (max-width: 992px) {
     .card {
-        width: calc(33.33% - 20px); /* Her satırda 3 kart */
+        width: calc(33.33% - 20px);
+        /* Her satırda 3 kart */
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 20px); /* Her satırda 2 kart */
+        width: calc(50% - 20px);
+        /* Her satırda 2 kart */
     }
 }
 
 @media (max-width: 576px) {
     .card {
-        width: calc(100% - 20px); /* Her satırda 1 kart */
+        width: calc(100% - 20px);
+        /* Her satırda 1 kart */
     }
 }
