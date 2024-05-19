@@ -219,16 +219,32 @@ footer .container p {
     border-radius: 10px;
 }
 
-.container .kişi-bilgileri {
-    background: linear-gradient(45deg, #AC58F5, #0F172A);
-    padding: 30px 20px;
-    color: var(--dortuncu);
-    text-align: left;
-    border-radius: 10px;
-    margin-bottom: 70px;
-    line-height: 1.8;
-    transition: transform 0.3s ease;
+
+.kişi-bilgileri {
+    background-color: var(--dortuncu);
+    padding: 20px;
+    color: var(--ikin-el);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+    line-height: 1.6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.kişi-bilgileri p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.kişi-bilgileri strong {
+    color: var(--ana-renk);
+}
+
+.kişi-bilgileri:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 .zaman-cizilgesi-kapak {
     position: relative;

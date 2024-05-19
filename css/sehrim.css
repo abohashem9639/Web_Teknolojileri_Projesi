@@ -166,19 +166,46 @@ footer .container p {
     padding: 0 0 10px;
 }
 
-.halep-intro h1 {
+
+/* Halep Şehri Hakkında Metin için Yeni CSS */
+
+.halep-intro {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--dortuncu);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.halep-intro h1.baslik {
+    text-align: center;
     color: var(--ikin-el);
-    font-size: 36px;
-    margin-bottom: 40px;
-    /* Boşluğu azaltmak için margin ayarlandı */
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
 .halep-intro p {
     color: var(--ikin-el);
     font-size: 15px;
-    margin-bottom: 50px;
-    /* Paragraflar arasındaki boşluk */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 5px solid var(--ana-renk);
+    border-radius: 5px;
 }
+
+.halep-intro p strong {
+    color: var(--ana-renk);
+    font-size: 17px;
+}
+
+.halep-intro p:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.01);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 
 .container .mySlides img,
 .container .row .column img {
@@ -282,26 +309,4 @@ footer .container p {
 .active,
 .demo:hover {
     opacity: 1;
-}
-
-
-.halep-intro p {
-    background: linear-gradient(45deg, var(--ana-renk), var(--gray));
-    padding: 30px 20px;
-    color: var(--ikin-el);
-    text-align: left;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    line-height: 1.8;
-
-    transition: transform 0.3s ease;
-}
-
-.halep-intro p:hover {
-    transform: scale(1.05);
-}
-
-.halep-intro p strong {
-    font-size: 19px;
-
 }
