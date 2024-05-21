@@ -8,6 +8,9 @@
 
 * {
     font-family: "Radio Canada Big", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -19,7 +22,6 @@ a {
     padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 @media (min-width: 576px) {
@@ -47,11 +49,11 @@ a {
 }
 
 header {
+    width: 100%;
     height: 62px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: var(--ikin-el) !important;
     margin-bottom: 20px;
-    /* Navbar altındaki boşluğu azalt */
 }
 
 header .container .navbar {
@@ -59,33 +61,26 @@ header .container .navbar {
     z-index: 10;
 }
 
-/* style.css dosyasına ekleyin */
 .giris {
     background-color: var(--ana-renk);
-    /* Arka plan rengi */
     color: white;
-    /* Yazı rengi */
     padding: 10px 20px;
-    /* İç boşluklar */
     border-radius: 5px;
-    /* Kenarlık köşelerini yuvarlama */
     text-align: center;
-    /* Metin hizalama */
     display: inline-block;
-    /* Satır içi blok gösterimi */
     font-size: 16px;
-    /* Yazı tipi boyutu */
     transition: background-color 0.3s ease;
-    /* Arka plan rengi geçiş efekti */
     margin-left: 40px;
     background-size: 10px;
 }
 
+.container .form-check-input:hover {
+    background-color: var(--ana-renk);
+}
+
 .giris:hover {
     background-color: var(--dortuncu);
-    /* Üzerine gelindiğinde arka plan rengi */
     color: #ffffff;
-    /* Üzerine gelindiğinde yazı rengi */
 }
 
 header .container .navbar .container-fluid>a {
@@ -116,17 +111,14 @@ header .container .navbar .container-fluid .collapse div a:hover {
     color: var(--ana-renk);
 }
 
-/* Header */
-
 /* Footer */
-
 footer {
+    width: 100%;
     background-color: var(--ikin-el);
 }
 
 footer .container>div {
     margin-top: 25px;
-
 }
 
 footer .container div h2 {
@@ -137,7 +129,6 @@ footer .container div h2 a {
     font-size: 24px;
     font-weight: 700;
     color: var(--dortuncu);
-
 }
 
 footer .container div div {
@@ -169,10 +160,7 @@ footer .container p {
     color: var(--dortuncu);
     margin: 0;
     padding: 0 0 10px;
-
 }
-
-/* Footer */
 
 .contact {
     padding: 50px 0;
@@ -218,7 +206,34 @@ footer .container p {
     padding-bottom: 30px;
 }
 
-.container .harita{
+.container .harita {
     display: flex;
-    width: 100% ;
+    width: 100%;
+}
+
+.container h3 {
+    color: var(--ikin-el);
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #d6d6d6;
+}
+
+.container th,
+td {
+    padding: 12px;
+    border: 1px solid var(--ikin-el);
+    text-align: left;
+}
+
+.container th {
+    background-color: var(--ana-renk);
+    color: var(--dortuncu);
+}
+
+.container tr:nth-child(even) {
+    background-color: var(--dortuncu);
 }

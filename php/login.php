@@ -1,3 +1,5 @@
+<?php include 'header.php'; ?>
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Kullanıcı adı ve şifreyi aldık
@@ -18,3 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<?php include 'footer.php'; ?>

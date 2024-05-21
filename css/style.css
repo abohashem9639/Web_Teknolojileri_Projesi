@@ -85,7 +85,6 @@ header .container .navbar .container-fluid>a {
     transition: background-color 0.3s ease;
     /* Arka plan rengi geçiş efekti */
     margin-left: 40px;
-    background-size: 10px;
 }
 
 .giris:hover {
@@ -103,6 +102,8 @@ header .container .navbar .container-fluid .collapse {
     flex-grow: 0;
     z-index: 10;
 }
+
+
 
 header .container .navbar .container-fluid .collapse div a {
     color: var(--dortuncu);
