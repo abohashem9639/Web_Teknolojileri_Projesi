@@ -86,6 +86,7 @@
                 <div class="mb-3">
                     <label for="sehiriniz" class="form-label">Şehiriniz</label>
                     <select class="form-control" id="sehiriniz" name="sehiriniz" ng-model="formData.sehiriniz" required>
+                       
                         <option value="" selected disabled>Şehir Seçiniz</option>
                         <option value="Adana">Adana</option>
                         <option value="Adıyaman">Adıyaman</option>
@@ -235,8 +236,9 @@
                             gereklidir.</small>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Gönder</button>
+                <button type="submit" class="btn btn-primary" ng-click="submitForm($event)">Gönder</button>
                 <button type="reset" class="btn btn-secondary" ng-click="resetForm()">Temizle</button>
+                <button type="button" class="btn btn-success" onclick="quickSubmit()">JS Kontrolu</button>
             </form>
             <div class="iletişim-bilgileri">
                 <p><a><i class="fa-solid fa-map-location-dot"></i></a> Kemalpaşa Mah. Necip fazel kısakürek Cad. 208 Sk.
@@ -269,32 +271,55 @@
         </div>
     </footer>
     <script>
-        var app = angular.module('contactApp', []);
-        app.controller('contactController', function ($scope) {
-            $scope.formData = {};
-            $scope.languages = ["C++", "C#", "Python", "JavaScript", "Java", "PHP"];
+        function quickSubmit() {
+            var form = document.forms['contactForm'];
+            var isValid = form.checkValidity();
+            var languagesSelected = Array.from(form['diller[]']).some(checkbox => checkbox.checked);
+    
+            if (isValid && languagesSelected) {
+                alert('Form başarıyla gönderildi!');
+                form.submit();
+            } else {
+                alert('Formunuz eksik veya hatalı.');
+            }
+        }
+    </script>    
+<script>
+    var app = angular.module('contactApp', []);
+    app.controller('contactController', function ($scope) {
+        $scope.formData = {};
+        $scope.languages = ["C++", "C#", "Python", "JavaScript", "Java", "PHP"];
 
-            $scope.isLanguageSelected = function () {
-                return Object.values($scope.formData.diller || {}).some(value => value);
-            };
+        $scope.isLanguageSelected = function () {
+            return Object.values($scope.formData.diller || {}).some(value => value);
+        };
 
-            $scope.submitForm = function (event) {
-                if ($scope.contactForm.$valid && $scope.isLanguageSelected()) {
-                    alert('Form başarıyla gönderildi!');
-                    $scope.contactForm.$setPristine();
-                    $scope.contactForm.$setUntouched();
-                } else {
-                    event.preventDefault();
-                }
-            };
-
-            $scope.resetForm = function () {
-                $scope.formData = {};
+        $scope.submitForm = function (event) {
+            if ($scope.contactForm.$valid && $scope.isLanguageSelected()) {
+                alert('Form başarıyla gönderildi!');
                 $scope.contactForm.$setPristine();
                 $scope.contactForm.$setUntouched();
-            };
-        });
-    </script>
+            } else {
+                event.preventDefault();
+            }
+        };
+
+        $scope.quickSubmit = function () {
+            if ($scope.contactForm.$valid && $scope.isLanguageSelected()) {
+                alert('Form başarıyla gönderildi!');
+                $scope.contactForm.$setPristine();
+                $scope.contactForm.$setUntouched();
+                document.contactForm.submit(); // Formun submit edilmesi
+            } 
+        };
+
+        $scope.resetForm = function () {
+            $scope.formData = {};
+            $scope.contactForm.$setPristine();
+            $scope.contactForm.$setUntouched();
+        };
+    });
+</script>
     <script src="js/bootstrap.js"></script>
 </body>
 

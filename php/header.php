@@ -27,7 +27,7 @@
                         <a class="nav-link" href="../miras.html">Miras</a>
                         <a class="nav-link" target="_blank" href="../ozgecmis.html">Özgeçmiş</a>
                         <a class="nav-link" href="../ilgialanlarim.html">İlgi Alanlarım</a>
-                        <a class="nav-link active" href="../iletisim.html">İletişim</a>
+                        <a class="nav-link" href="../iletisim.html">İletişim</a>
                         <a class="giris" target="_blank" href="../login.html" d-hover="LogIn">Giriş Yap</a>
                     </div>
                 </div>

@@ -39,4 +39,3 @@
     }
     ?>
 
-<?php include 'footer.php'; ?>
